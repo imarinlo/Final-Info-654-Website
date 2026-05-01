@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>Web Basics Project</title>
+<meta name="description" content="My web basics page.">
+<meta name="keywords" content="HTML,CSS,webpage">
+<meta name="author" content="Sarah-Ann Jean Paul">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Clouds</h1>
+<p> When you look up in the sky, you may see clouds. Sometimes, they are big and fluffy like a marshmallow, while others times, they are thin and feathery. Sometimes they look dark and heavy, and it starts to rain--other times, they are white and the weather is nice all day. Why does that happen? Where do clouds even come from? What do they tell us about the weather? </p>
+<h2> Let's learn all about clouds!</h2>
+<h3> How do clouds form?</h3>
+<p> Have you every wondered how clouds are made?</p>
+<p>Clouds are made up of millions of tiny water droplets or ice crystals floating together in the air. Clouds can tell us about what weather we can expect for the day based on how they look! </p>
+<h3>What are the different types of clouds?</h3>
+<p> One day, the clouds in the sky look big and soft, and it's perfect weather to go out and play. Other times, the clouds look heavy, and after a little while, it starts to rain--sometimes there's even thunder and lightning! There are 4 main types of clouds, and meteorologists--scientists who observe, studies, or predict the weather-- look at these clouds to help tell us what kind of weather we'll have for the day!</p>
+<div id="list">
+<ol>
+<li>Cirrus Clouds</li>
+<p> Cirrus clouds are clouds that are the highest in the sky. These clouds are mainly made up of ice crystals because the higher up you go in the sky, the colder it gets. Cirrus clouds are wispy and thin, and usually mean there will be nice, warm weather! </p>
+<p> Fun Fact: Cirrus comes from the Latin word "cirro" which means "hair"--cirrus clouds look like wisps of hair!</p>
+<li> Alto Clouds</li>
+<p> Alto clouds are clouds that can be found in the middle of the sky. These clouds can be made up of ice crystals, water droplets, or both because they sit in the middle, where the air can be either very cold or not too cold depending on the season. There are two kinds of alto clouds, altostratus and altocumulus.</p>
+<p>Altostratus clouds usually cover the sky like a thick blanket, and can be blue-grey or grey in color. When you see altostratus clouds, it may rain very, very lightly or be misty. Altocumulus clouds, on the other hand, look like fluffy clumps! They can be white or white-grey in color, and if you see them in the summer on a hot, humid morning, there may be a thunderstorm in the afternoon!</p>
+<p> Fun Fact: Altostratus clouds are also called "blanket clouds" because the cover the sky like a big blanket!</p>
+<li>Stratus</li>
+<p>Stratus clouds are clouds that are low in the sky. These clouds are, most of the time, made up of water droplets because of where they are in the sky. There are two types of stratus clouds, stratocumulus and nimbostratus.</p>
+<p>Stratocumulus clouds are a mix of thin and thick clouds--they kind of look like a honeycomb! Sometimes you can see the sky between stratocumulus clouds, and sometimes the clouds are all mushed together. Nimbostratus clouds are dark-grey clouds that cover the sun completely, and you can expect steady rain that lasts for hours--but no lightning or thunder!</p>
+<p> Fun Fact: While stratonumbus clouds do not mean rain, they can turn into nimbostratus clouds, and we know what that means--make sure to pay attention so you don't get wet!
+<li> Cumulus Clouds</li>
+<p> Cumulus clouds are another kind of cloud that can be found low in the sky. These clouds are big and fluffy like cotton-balls piled on top of each other, with flat bottoms. The main type of cloud type you'll see is the cumulonimbus cloud. These clouds will always bring big storms: thunderstorms, hail, snowstorms and even tornadoes--yikes! 
+<p> Fun Fact: Cumulonimbus clouds are also called "thunderheads" because when you see them, get ready for a thunderstorm--and where there's thunder, there's always lightning!
+</ol>
+</div>
+<h2>Head in the Clouds!</h2>
+<h3>Cloud Quiz</h3>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Go Back!
+<button id="next">Next Question!
+<button id="submit">I'm All Done!
+<div id="results"></div>
+<script>
+(function(){
+  // Functions
+  function buildQuiz(){
+    // variable to store the HTML output
+    const output = [];
+
+    // for each question...
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+        // variable to store the list of possible answers
+        const answers = [];
+
+        // and for each available answer...
+        for(letter in currentQuestion.answers){
+
+          // ...add an HTML radio button
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}"/>
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            `
+          );
+        }
+
+        // add this question and its answers to the output
+        output.push(
+          `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join("")} </div>
+          </div>`
+        );
+      }
+    );
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if(userAnswer === currentQuestion.correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      // if answer is wrong or blank
+      else{
+        // color the answers red
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active-slide');
+    slides[n].classList.add('active-slide');
+    currentSlide = n;
+    if(currentSlide === 0){
+      previousButton.style.display = 'none';
+    }
+    else{
+      previousButton.style.display = 'inline-block';
+    }
+    if(currentSlide === slides.length-1){
+      nextButton.style.display = 'none';
+      submitButton.style.display = 'inline-block';
+    }
+    else{
+      nextButton.style.display = 'inline-block';
+      submitButton.style.display = 'none';
+    }
+  }
+
+  function showNextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function showPreviousSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  // Variables
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "Clouds that are low in the sky are called ______ clouds.",
+      answers: {
+        a: "Stratus",
+        b: "Puffy",
+        c: "Rain"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Clouds that are in the middle of the sky are called ______ clouds.",
+      answers: {
+        a: "Cotton",
+        b: "Thunder",
+        c: "Alto"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Clouds that are high in the sky are called ______ clouds.",
+      answers: {
+        a: "Hair",
+        b: "Cirrus",
+        c: "Snow",
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Cumulonimbus clouds are also called _______heads because they bring thunder!",
+      answers: {
+        a: "Tornado",
+        b: "Thunder",
+        c: "Rain",
+      },
+      correctAnswer: "b"
+  },
+  {
+      question: "Altostratus clouds are also called _______ clouds because they cover the sky like a big blanket!",
+      answers: {
+        a: "Blanket",
+        b: "Lightning",
+        c: "Puffy",
+      },
+      correctAnswer: "a"
+  },
+  ];
+
+  // Kick things off
+  buildQuiz();
+
+  // Pagination
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  // Show the first slide
+  showSlide(currentSlide);
+
+  // Event listeners
+  submitButton.addEventListener('click', showResults);
+  previousButton.addEventListener("click", showPreviousSlide);
+  nextButton.addEventListener("click", showNextSlide);
+})();
+</script>
+</body> 
+</html>
