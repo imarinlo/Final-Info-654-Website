@@ -284,7 +284,7 @@
 <div id="cards"></div>
 
 <script>
-var inputBox = document.getElementById("search-input");
+  var inputBox = document.getElementById("search-input");
   var searchButton = document.getElementById("search-btn");
   var resultsBox = document.getElementById("cards");
 
@@ -296,13 +296,16 @@ var inputBox = document.getElementById("search-input");
       return;
     }
 
+    resultsBox.style.display = "block";
     resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
 
-    var url = "https://corsproxy.io/?" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");        return response.json();
-      })
-    fetch(url)
+    var url = "https://corsproxy.io/?" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");
 
-       .then(function(data) {
+    fetch(url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
         console.log(data);
         var product = data.products[0];
 
@@ -318,37 +321,7 @@ var inputBox = document.getElementById("search-input");
 
         var calories = Math.round(product.nutriments["energy-kcal_100g"] * ratio);
         var carbs = (product.nutriments["carbohydrates_100g"] * ratio).toFixed(1);
-        var fat = (product.nutriments["fat_100g"] * ratio).toFixed(1);
-        var protein = (product.nutriments["proteins_100g"] * ratio).toFixed(1);
-        var sugars = (product.nutriments["sugars_100g"] * ratio).toFixed(1);
-        var grade = product.nutrition_grades;
-
-        var cardHTML = "";
-        cardHTML = cardHTML + "<h2>" + name + "</h2>";
-        cardHTML = cardHTML + "<p>Serving size: " + serving + "</p>";
-        cardHTML = cardHTML + "<p>Calories: " + calories + " kcal</p>";
-        cardHTML = cardHTML + "<p>Carbs: " + carbs + " g</p>";
-        cardHTML = cardHTML + "<p>Fat: " + fat + " g</p>";
-        cardHTML = cardHTML + "<p>Protein: " + protein + " g</p>";
-        cardHTML = cardHTML + "<p>Sugars: " + sugars + " g</p>";
-
-        if (grade) {
-          cardHTML = cardHTML + "<p>Nutri-Score: <strong>" + grade.toUpperCase() + "</strong></p>";
-        } else {
-          cardHTML = cardHTML + "<p>Nutri-Score: Not available</p>";
-        }
-        resultsBox.style.display = "block";
-        resultsBox.innerHTML = cardHTML;
-
-      })
-
-      .catch(function(error) {
-        resultsBox.innerHTML = "<p>Something went wrong: " + error.message + "</p>";
-      });
-
-  });
-
-</script>
+        var fat = (product.nutrimen
     
 
   <hr />
