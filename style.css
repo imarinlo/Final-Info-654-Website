@@ -1,18 +1,6 @@
-/* 
-   Color palette:
-     Background:   #121212  (dark)
-     Teal accent:  #03DAC6
-     Purple dark:  #3700B3
-     Purple light: #BB86FC
-     Pink/red:     #CF6679
-     White text:   #FFFFFF
+/* colors: #121212 background, #FFFFFF text, #03DAC6 teal, #3700B3 purple, #BB86FC light purple, #CF6679 pink, font: Comic Sans */
 
-   Font: Comic Sans MS
-   */
-
-
-/*main*/
-
+/* body */
 body {
   background-color: #121212;
   color: #FFFFFF;
@@ -25,9 +13,7 @@ body {
   text-align: left;
 }
 
-
-/*navigation*/
-
+/* nav */
 nav {
   background-color: #3700B3;
   padding: 14px 20px;
@@ -37,29 +23,27 @@ nav {
   margin-bottom: 24px;
 }
 
+/* nav links */
 nav a {
   color: #FFFFFF;
   text-decoration: none;
   margin: 0 10px;
 }
 
+/* nav hover */
 nav a:hover {
   color: #03DAC6;
   text-decoration: underline;
 }
 
-
-/*horizontal line*/
-
+/* divider */
 hr {
   border: none;
   border-top: 3px solid #CF6679;
   margin: 32px 0;
 }
 
-
-/*headings*/
-
+/* h1 */
 h1 {
   color: #03DAC6;
   font-size: 2.4em;
@@ -67,6 +51,7 @@ h1 {
   margin-bottom: 12px;
 }
 
+/* h2 */
 h2 {
   color: #BB86FC;
   font-size: 1.8em;
@@ -76,6 +61,7 @@ h2 {
   text-align: left;
 }
 
+/* h3 */
 h3 {
   color: #03DAC6;
   font-size: 1.3em;
@@ -83,47 +69,39 @@ h3 {
   text-align: left;
 }
 
-
-/*paragraphs*/
-
+/* paragraphs */
 p {
   margin-bottom: 16px;
 }
 
-
-/*lists*/
-
+/* lists */
 ul, ol {
   padding-left: 28px;
   margin-bottom: 16px;
 }
 
+/* list items */
 li {
   margin-bottom: 10px;
 }
 
-
-/*bold*/
-
+/* bold */
 strong {
   color: #03DAC6;
 }
 
-
-/*links*/
-
+/* links */
 a {
   color: #BB86FC;
   text-decoration: underline;
 }
 
+/* link hover */
 a:hover {
   color: #03DAC6;
 }
 
-
-/*table soil page*/
-
+/* table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -131,6 +109,7 @@ table {
   font-size: 1em;
 }
 
+/* table header */
 th {
   background-color: #3700B3;
   color: #FFFFFF;
@@ -138,6 +117,7 @@ th {
   text-align: left;
 }
 
+/* table cells */
 td {
   background-color: #1E1E1E;
   color: #FFFFFF;
@@ -145,13 +125,12 @@ td {
   border-bottom: 2px solid #3700B3;
 }
 
+/* row hover */
 tr:hover td {
   background-color: #2A2A2A;
 }
 
-
-/*api search soil page*/
-
+/* search box */
 #search-input {
   background-color: #1E1E1E;
   color: #FFFFFF;
@@ -164,10 +143,12 @@ tr:hover td {
   margin-right: 10px;
 }
 
+/* placeholder text */
 #search-input::placeholder {
   color: #888888;
 }
 
+/* search button */
 #search-btn {
   background-color: #3700B3;
   color: #FFFFFF;
@@ -179,11 +160,13 @@ tr:hover td {
   cursor: pointer;
 }
 
+/* button hover */
 #search-btn:hover {
   background-color: #03DAC6;
   color: #121212;
 }
 
+/* results card */
 #cards {
   margin-top: 20px;
   background-color: #1E1E1E;
@@ -193,24 +176,25 @@ tr:hover td {
   display: none;
 }
 
+/* card heading */
 #cards h2 {
   color: #03DAC6;
   margin-top: 0;
   border-bottom: 2px solid #3700B3;
 }
 
+/* card text */
 #cards p {
   margin: 8px 0;
   font-size: 1em;
 }
 
-
-/*home page layers of the earth*/
-
+/* layer block */
 .layer-block {
   margin-bottom: 16px;
 }
 
+/* layer link */
 .layer-block a {
   display: block;
   text-decoration: none;
@@ -220,10 +204,12 @@ tr:hover td {
   overflow: hidden;
 }
 
+/* layer hover */
 .layer-block a:hover {
   border-color: #CF6679;
 }
 
+/* layer label */
 .layer-block h3 {
   background-color: #3700B3;
   color: #FFFFFF;
@@ -233,10 +219,12 @@ tr:hover td {
   text-align: center;
 }
 
+/* label hover */
 .layer-block a:hover h3 {
   background-color: #CF6679;
 }
 
+/* layer image */
 .layer-block img {
   width: 100%;
   height: 160px;
@@ -245,7 +233,7 @@ tr:hover td {
   object-position: center;
 }
 
-/*artemis image*/
+/* artemis image */
 .artemis-image {
   width: 100%;
   height: 400px;
@@ -253,9 +241,7 @@ tr:hover td {
   display: block;
 }
 
-
-/*quiz soil page*/
-
+/* quiz answers */
 ol li {
   margin-bottom: 14px;
 }
@@ -264,15 +250,14 @@ ol li em {
   color: #CF6679;
 }
 
-
-/*sources section*/
-
+/* sources */
 h2 + ul li,
 h2 + ul li a {
   font-size: 0.95em;
   color: #BBBBBB;
 }
 
+/* sources hover */
 h2 + ul li a:hover {
   color: #03DAC6;
 }
