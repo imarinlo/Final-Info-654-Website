@@ -6,7 +6,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-    <nav>
+<body>
+
+  <nav>
     <a href="index.html">Home</a> |
     <a href="underground.html">Underground</a> |
     <a href="soil.html">Soil</a> |
@@ -14,8 +16,6 @@
     <a href="space.html">Space</a> |
     <a href="about.html">About</a>
   </nav>
-
-<body>
 
   <h1>Soil and Food: From the Ground to Your Plate</h1>
 
@@ -279,51 +279,77 @@
   <!-- SECTION 6 -->
   <h2>Try It Yourself!</h2>
 
-<input id="search-input" type="text" placeholder="e.g. apple, oat milk..." />
-<button id="search-btn">Search</button>
-<div id="cards"></div>
+  <input id="search-input" type="text" placeholder="e.g. apple, oat milk..." />
+  <button id="search-btn">Search</button>
+  <div id="cards"></div>
 
-<script>
-  var inputBox = document.getElementById("search-input");
-  var searchButton = document.getElementById("search-btn");
-  var resultsBox = document.getElementById("cards");
-  console.log(searchButton);
+  <script>
+    var inputBox = document.getElementById("search-input");
+    var searchButton = document.getElementById("search-btn");
+    var resultsBox = document.getElementById("cards");
 
-  searchButton.addEventListener("click", function() {
+    searchButton.addEventListener("click", function() {
 
-    var foodName = inputBox.value;
+      var foodName = inputBox.value;
 
-    if (foodName == "") {
-      return;
-    }
+      if (foodName == "") {
+        return;
+      }
 
-    resultsBox.style.display = "block";
-    resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
+      resultsBox.style.display = "block";
+      resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
 
-    var url = "https://corsproxy.io/?" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");
+      var url = "https://corsproxy.io/?" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");
 
-    fetch(url)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        console.log(data);
-        var product = data.products[0];
+      fetch(url)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
 
-        if (product == undefined) {
-          resultsBox.innerHTML = "<p>No results found for " + foodName + "</p>";
-          return;
-        }
+          var product = data.products[0];
 
-        var name = product.product_name_en || product.product_name;
-        var serving = product.serving_size || "100g";
-        var servingGrams = parseFloat(product.serving_quantity) || 100;
-        var ratio = servingGrams / 100;
+          if (product == undefined) {
+            resultsBox.innerHTML = "<p>No results found for " + foodName + "</p>";
+            return;
+          }
 
-        var calories = Math.round(product.nutriments["energy-kcal_100g"] * ratio);
-        var carbs = (product.nutriments["carbohydrates_100g"] * ratio).toFixed(1);
-        var fat = (product.nutrimen
-    
+          var name = product.product_name_en || product.product_name;
+          var serving = product.serving_size || "100g";
+          var servingGrams = parseFloat(product.serving_quantity) || 100;
+          var ratio = servingGrams / 100;
+
+          var calories = Math.round(product.nutriments["energy-kcal_100g"] * ratio);
+          var carbs = (product.nutriments["carbohydrates_100g"] * ratio).toFixed(1);
+          var fat = (product.nutriments["fat_100g"] * ratio).toFixed(1);
+          var protein = (product.nutriments["proteins_100g"] * ratio).toFixed(1);
+          var sugars = (product.nutriments["sugars_100g"] * ratio).toFixed(1);
+          var grade = product.nutrition_grades;
+
+          var cardHTML = "";
+          cardHTML = cardHTML + "<h2>" + name + "</h2>";
+          cardHTML = cardHTML + "<p>Serving size: " + serving + "</p>";
+          cardHTML = cardHTML + "<p>Calories: " + calories + " kcal</p>";
+          cardHTML = cardHTML + "<p>Carbs: " + carbs + " g</p>";
+          cardHTML = cardHTML + "<p>Fat: " + fat + " g</p>";
+          cardHTML = cardHTML + "<p>Protein: " + protein + " g</p>";
+          cardHTML = cardHTML + "<p>Sugars: " + sugars + " g</p>";
+
+          if (grade) {
+            cardHTML = cardHTML + "<p>Nutri-Score: <strong>" + grade.toUpperCase() + "</strong></p>";
+          } else {
+            cardHTML = cardHTML + "<p>Nutri-Score: Not available</p>";
+          }
+
+          resultsBox.innerHTML = cardHTML;
+
+        })
+        .catch(function(error) {
+          resultsBox.innerHTML = "<p>Something went wrong: " + error.message + "</p>";
+        });
+
+    });
+  </script>
 
   <hr />
 
@@ -368,8 +394,6 @@
       <a href="https://www.myplate.gov" target="_blank">myplate.gov</a>. Accessed 21 Apr. 2026.
     </li>
   </ul>
-
-
 
 </body>
 </html>
