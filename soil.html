@@ -302,8 +302,8 @@ var inputBox = document.getElementById("search-input");
       })
     fetch(url)
 
-      .then(function(data) {
-
+       .then(function(data) {
+        console.log(data);
         var product = data.products[0];
 
         if (product == undefined) {
