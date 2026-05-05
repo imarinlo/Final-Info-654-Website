@@ -1,0 +1,278 @@
+/* 
+   Color palette:
+     Background:   #121212  (dark)
+     Teal accent:  #03DAC6
+     Purple dark:  #3700B3
+     Purple light: #BB86FC
+     Pink/red:     #CF6679
+     White text:   #FFFFFF
+
+   Font: Comic Sans MS
+   */
+
+
+/*main*/
+
+body {
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: left;
+}
+
+
+/*navigation*/
+
+nav {
+  background-color: #3700B3;
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: #03DAC6;
+  text-decoration: underline;
+}
+
+
+/*horizontal line*/
+
+hr {
+  border: none;
+  border-top: 3px solid #CF6679;
+  margin: 32px 0;
+}
+
+
+/*headings*/
+
+h1 {
+  color: #03DAC6;
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+h2 {
+  color: #BB86FC;
+  font-size: 1.8em;
+  border-bottom: 3px solid #CF6679;
+  padding-bottom: 6px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+h3 {
+  color: #03DAC6;
+  font-size: 1.3em;
+  margin-top: 28px;
+  text-align: left;
+}
+
+
+/*paragraphs*/
+
+p {
+  margin-bottom: 16px;
+}
+
+
+/*lists*/
+
+ul, ol {
+  padding-left: 28px;
+  margin-bottom: 16px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+/*bold*/
+
+strong {
+  color: #03DAC6;
+}
+
+
+/*links*/
+
+a {
+  color: #BB86FC;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #03DAC6;
+}
+
+
+/*table soil page*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 1em;
+}
+
+th {
+  background-color: #3700B3;
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+td {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  padding: 12px 16px;
+  border-bottom: 2px solid #3700B3;
+}
+
+tr:hover td {
+  background-color: #2A2A2A;
+}
+
+
+/*api search soil page*/
+
+#search-input {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  border: 2px solid #BB86FC;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 1em;
+  width: 60%;
+  margin-right: 10px;
+}
+
+#search-input::placeholder {
+  color: #888888;
+}
+
+#search-btn {
+  background-color: #3700B3;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #03DAC6;
+  color: #121212;
+}
+
+#cards {
+  margin-top: 20px;
+  background-color: #1E1E1E;
+  border: 2px solid #BB86FC;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: none;
+}
+
+#cards h2 {
+  color: #03DAC6;
+  margin-top: 0;
+  border-bottom: 2px solid #3700B3;
+}
+
+#cards p {
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+
+/*home page layers of the earth*/
+
+.layer-block {
+  margin-bottom: 16px;
+}
+
+.layer-block a {
+  display: block;
+  text-decoration: none;
+  background-color: #1E1E1E;
+  border: 3px solid #3700B3;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.layer-block a:hover {
+  border-color: #CF6679;
+}
+
+.layer-block h3 {
+  background-color: #3700B3;
+  color: #FFFFFF;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.layer-block a:hover h3 {
+  background-color: #CF6679;
+}
+
+.layer-block img {
+  width: 100%;
+  height: 160px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*artemis image*/
+.artemis-image {
+  width: 100%;
+  height: 400px;
+  object-fit: fill;
+  display: block;
+}
+
+
+/*quiz soil page*/
+
+ol li {
+  margin-bottom: 14px;
+}
+
+ol li em {
+  color: #CF6679;
+}
+
+
+/*sources section*/
+
+h2 + ul li,
+h2 + ul li a {
+  font-size: 0.95em;
+  color: #BBBBBB;
+}
+
+h2 + ul li a:hover {
+  color: #03DAC6;
+}
