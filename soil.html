@@ -299,14 +299,11 @@
       resultsBox.style.display = "block";
       resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
 
-      var url = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");
+      var url = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + encodeURIComponent(foodName) + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity";
 
-      fetch(url)
+      fetch(url, { mode: "cors" })
         .then(function(response) {
           return response.json();
-        })
-        .then(function(wrapper) {
-          return JSON.parse(wrapper.contents);
         })
         .then(function(data) {
 
@@ -317,32 +314,33 @@
             return;
           }
 
-          var name = product.product_name_en || product.product_name;
+          var name = product.product_name_en || product.product_name || foodName;
           var serving = product.serving_size || "100g";
           var servingGrams = parseFloat(product.serving_quantity) || 100;
           var ratio = servingGrams / 100;
 
-          var calories = Math.round(product.nutriments["energy-kcal_100g"] * ratio);
-          var carbs = (product.nutriments["carbohydrates_100g"] * ratio).toFixed(1);
-          var fat = (product.nutriments["fat_100g"] * ratio).toFixed(1);
-          var protein = (product.nutriments["proteins_100g"] * ratio).toFixed(1);
-          var sugars = (product.nutriments["sugars_100g"] * ratio).toFixed(1);
+          var cal = product.nutriments["energy-kcal_100g"];
+          var carbsRaw = product.nutriments["carbohydrates_100g"];
+          var fatRaw = product.nutriments["fat_100g"];
+          var proteinRaw = product.nutriments["proteins_100g"];
+          var sugarsRaw = product.nutriments["sugars_100g"];
           var grade = product.nutrition_grades;
 
-          var cardHTML = "";
-          cardHTML = cardHTML + "<h2>" + name + "</h2>";
-          cardHTML = cardHTML + "<p>Serving size: " + serving + "</p>";
-          cardHTML = cardHTML + "<p>Calories: " + calories + " kcal</p>";
-          cardHTML = cardHTML + "<p>Carbs: " + carbs + " g</p>";
-          cardHTML = cardHTML + "<p>Fat: " + fat + " g</p>";
-          cardHTML = cardHTML + "<p>Protein: " + protein + " g</p>";
-          cardHTML = cardHTML + "<p>Sugars: " + sugars + " g</p>";
+          var calories = cal ? Math.round(cal * ratio) : "N/A";
+          var carbs = carbsRaw ? (carbsRaw * ratio).toFixed(1) + " g" : "N/A";
+          var fat = fatRaw ? (fatRaw * ratio).toFixed(1) + " g" : "N/A";
+          var protein = proteinRaw ? (proteinRaw * ratio).toFixed(1) + " g" : "N/A";
+          var sugars = sugarsRaw ? (sugarsRaw * ratio).toFixed(1) + " g" : "N/A";
 
-          if (grade) {
-            cardHTML = cardHTML + "<p>Nutri-Score: <strong>" + grade.toUpperCase() + "</strong></p>";
-          } else {
-            cardHTML = cardHTML + "<p>Nutri-Score: Not available</p>";
-          }
+          var cardHTML = "";
+          cardHTML += "<h2>" + name + "</h2>";
+          cardHTML += "<p>Serving size: " + serving + "</p>";
+          cardHTML += "<p>Calories: " + calories + (cal ? " kcal" : "") + "</p>";
+          cardHTML += "<p>Carbs: " + carbs + "</p>";
+          cardHTML += "<p>Fat: " + fat + "</p>";
+          cardHTML += "<p>Protein: " + protein + "</p>";
+          cardHTML += "<p>Sugars: " + sugars + "</p>";
+          cardHTML += "<p>Nutri-Score: <strong>" + (grade ? grade.toUpperCase() : "Not available") + "</strong></p>";
 
           resultsBox.innerHTML = cardHTML;
 
