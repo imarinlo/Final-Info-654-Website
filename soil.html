@@ -299,11 +299,14 @@
       resultsBox.style.display = "block";
       resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
 
-      var url = "https://corsproxy.io/?" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");
-
+      var url = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + foodName + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity");
       fetch(url)
-        .then(function(response) {
-          return response.json();
+           .then(function(response) {
+        return response.json();
+      })
+      .then(function(wrapper) {
+        return JSON.parse(wrapper.contents);
+      })
         })
         .then(function(data) {
 
