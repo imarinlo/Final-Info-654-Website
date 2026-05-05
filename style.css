@@ -287,42 +287,42 @@ body.soil-page ol li em { color: #FFD166; }
 body.soil-page h2 + ul li, body.soil-page h2 + ul li a { color: #A8D88A; }
 body.soil-page h2 + ul li a:hover { color: #C8FF57; }
 
-/* section 1 - dirt brown */
+/* section 1 */
 body.soil-page .section-1 { background-color: #3B1F0A; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-1 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
 body.soil-page .section-1 h3 { color: #FFA94D; }
 body.soil-page .section-1 strong { color: #FFD166; }
 
-/* section 2 - deep soil green */
+/* section 2 */
 body.soil-page .section-2 { background-color: #0D2E05; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-2 h2 { color: #C8FF57; border-bottom: 3px solid #C8FF57; }
 body.soil-page .section-2 h3 { color: #A8D85A; }
 body.soil-page .section-2 strong { color: #C8FF57; }
 
-/* section 3 - leaf green */
+/* section 3  */
 body.soil-page .section-3 { background-color: #1A4A08; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-3 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
 body.soil-page .section-3 h3 { color: #FFA94D; }
 body.soil-page .section-3 strong { color: #FFD166; }
 
-/* section 4 - harvest orange */
+/* section 4 */
 body.soil-page .section-4 { background-color: #3B2000; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-4 h2 { color: #C8FF57; border-bottom: 3px solid #C8FF57; }
 body.soil-page .section-4 h3 { color: #A8D85A; }
 body.soil-page .section-4 strong { color: #C8FF57; }
 
-/* section 5 - fresh garden */
+/* section 5 */
 body.soil-page .section-5 { background-color: #0A3020; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-5 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
 body.soil-page .section-5 h3 { color: #FFA94D; }
 body.soil-page .section-5 strong { color: #FFD166; }
 
-/* section 6 - earthy clay */
+/* section 6 */
 body.soil-page .section-6 { background-color: #2E1503; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-6 h2 { color: #C8FF57; border-bottom: 3px solid #C8FF57; }
 body.soil-page .section-6 strong { color: #C8FF57; }
 
-/* section 7 - mossy */
+/* section 7*/
 body.soil-page .section-7 { background-color: #142808; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
 body.soil-page .section-7 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
 body.soil-page .section-7 strong { color: #FFD166; }
