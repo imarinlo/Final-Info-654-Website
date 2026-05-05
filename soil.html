@@ -299,9 +299,7 @@ var inputBox = document.getElementById("search-input");
     resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
 
     var query = encodeURIComponent(foodName);
-    var url = "https://world.openfoodfacts.org/api/v2/search?search_terms=" + query + "&page_size=1&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity";
-    fetch(url)
-
+    var url = "https://world.openfoodfacts.net/api/v2/search?search_terms=" + query + "&page_size=1&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity";
       .then(function(response) {
         return response.json();
       })
@@ -344,6 +342,10 @@ var inputBox = document.getElementById("search-input");
         resultsBox.style.display = "block";
         resultsBox.innerHTML = cardHTML;
 
+      })
+
+      .catch(function(error) {
+        resultsBox.innerHTML = "<p>Something went wrong: " + error.message + "</p>";
       });
 
   });
