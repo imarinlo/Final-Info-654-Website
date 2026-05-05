@@ -283,7 +283,7 @@
   <button id="search-btn">Search</button>
   <div id="cards"></div>
 
- <script>
+  <script>
     var inputBox = document.getElementById("search-input");
     var searchButton = document.getElementById("search-btn");
     var resultsBox = document.getElementById("cards");
@@ -350,6 +350,8 @@
         .catch(function(error) {
           resultsBox.innerHTML = "<p>Something went wrong: " + error.message + "</p>";
         });
+
+    });
   </script>
 
   <hr />
