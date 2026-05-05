@@ -263,7 +263,7 @@ h2 + ul li a:hover {
 }
 
 /* soil page only colors */
-body.soil-page { background-color: #1A3A0A; }
+body.soil-page { background-color: #d8f4ca; }
 body.soil-page nav { background-color: #7B3F00; }
 body.soil-page nav a { color: #FFFFFF; }
 body.soil-page nav a:hover { color: #C8FF57; }
