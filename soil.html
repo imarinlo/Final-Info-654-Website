@@ -295,8 +295,7 @@
         return;
       }
 
-      var url = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + encodeURIComponent(foodName) + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity";
-
+      var url = "https://us.openfoodfacts.org/cgi/search.pl?search_terms=" + encodeURIComponent(foodName) + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity&cc=us&lc=en";
       fetch(url, { mode: "cors" })
         .then(function(response) {
           return response.json();
