@@ -288,16 +288,12 @@
     var searchButton = document.getElementById("search-btn");
     var resultsBox = document.getElementById("cards");
 
-    searchButton.addEventListener("click", function() {
+    function searchFood(foodName, attempts) {
 
-      var foodName = inputBox.value;
-
-      if (foodName == "") {
+      if (attempts == 0) {
+        resultsBox.innerHTML = "<p>Could not load results. Please try again.</p>";
         return;
       }
-
-      resultsBox.style.display = "block";
-      resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
 
       var url = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=" + encodeURIComponent(foodName) + "&search_simple=1&action=process&json=1&page_size=1&sort_by=unique_scans_n&fields=product_name,product_name_en,nutriments,nutrition_grades,serving_size,serving_quantity";
 
@@ -326,7 +322,7 @@
           var sugarsRaw = product.nutriments["sugars_100g"];
           var grade = product.nutrition_grades;
 
-          var calories = cal ? Math.round(cal * ratio) : "N/A";
+          var calories = cal ? Math.round(cal * ratio) + " kcal" : "N/A";
           var carbs = carbsRaw ? (carbsRaw * ratio).toFixed(1) + " g" : "N/A";
           var fat = fatRaw ? (fatRaw * ratio).toFixed(1) + " g" : "N/A";
           var protein = proteinRaw ? (proteinRaw * ratio).toFixed(1) + " g" : "N/A";
@@ -335,7 +331,7 @@
           var cardHTML = "";
           cardHTML += "<h2>" + name + "</h2>";
           cardHTML += "<p>Serving size: " + serving + "</p>";
-          cardHTML += "<p>Calories: " + calories + (cal ? " kcal" : "") + "</p>";
+          cardHTML += "<p>Calories: " + calories + "</p>";
           cardHTML += "<p>Carbs: " + carbs + "</p>";
           cardHTML += "<p>Fat: " + fat + "</p>";
           cardHTML += "<p>Protein: " + protein + "</p>";
@@ -345,9 +341,26 @@
           resultsBox.innerHTML = cardHTML;
 
         })
-        .catch(function(error) {
-          resultsBox.innerHTML = "<p>Something went wrong: " + error.message + "</p>";
+        .catch(function() {
+          resultsBox.innerHTML = "<p>Trying again...</p>";
+          setTimeout(function() {
+            searchFood(foodName, attempts - 1);
+          }, 1000);
         });
+    }
+
+    searchButton.addEventListener("click", function() {
+
+      var foodName = inputBox.value;
+
+      if (foodName == "") {
+        return;
+      }
+
+      resultsBox.style.display = "block";
+      resultsBox.innerHTML = "<p>Loading " + foodName + "...</p>";
+
+      searchFood(foodName, 5);
 
     });
   </script>
