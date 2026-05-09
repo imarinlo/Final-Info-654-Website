@@ -81,14 +81,21 @@
         </table>
 
 <!-- SECTION 10 -->
- <h1>Astronomy picture of the day</h1>
-        <script>
-            fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-      // use data.title, data.url, data.explanation, etc.
-    });
+<h1>Astronomy picture of the day</h1>
+<h2 id="apod-title"></h2>
+<img id="apod-image" style="max-width: 100%;"></img>
+<p id="apod-desc"></p>
+
+<script>
+    fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+        .then(res => res.json())
+        .then (data => {
+            document.getElementById("apod-title").textContent = data.title;
+            document.getElementById("apod-image").src = data.url;
+            document.getElementById("apod-image").alt = data.title;
+            document.getElementById("apod-description").textContent = data.explanation;
+        })
+        .catch(error => console.error("Error:", error));
 </script>
 
 <!-- SECTION 11 -->
