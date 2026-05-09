@@ -1,3 +1,4 @@
+/* colors: #121212 background, #FFFFFF text, #03DAC6 teal, #3700B3 purple, #BB86FC light purple, #CF6679 pink, font: Comic Sans */
 
 /* body */
 body {
@@ -239,6 +240,7 @@ tr:hover td {
   object-fit: fill;
   display: block;
 }
+
 /* storm image */
 .storm-image {
   width: 100%;
@@ -349,11 +351,6 @@ body.soil-page .section-7 { background-color: #142808; border-radius: 12px; padd
 body.soil-page .section-7 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
 body.soil-page .section-7 strong { color: #FFD166; }
 
-.flower-gif {
-  width: 160px;
-  height: 160px;
-}
-
 
 /* space page only colors */
 /* section 8 */
@@ -361,3 +358,5 @@ body.space-page .section-8 { background-color: #BB86FC; border-radius: 12px; pad
 body.space-page .section-8 h2 { color: #CF6679; border-bottom: 3px solid #FFD166; }
 body.space-page .section-8 h3 { color: #FFA94D; }
 body.space-page .section-8 strong { color: #FFD166; }
+
+
