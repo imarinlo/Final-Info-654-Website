@@ -25,7 +25,7 @@
         <p>From sunshine to the moon and the stars.. space is out there! Space exploration began in 1957 when the Soviet Union (present day: Russia) launched the first artifical satellite, Sputnik 1, into space.
             Years later, in 1969, astronaut Neil Armstrong made the "one giant leap for mankind" as he stepped onto the Moon. Since then, the exploration of space has continued--from to pop star Katy Perry making a trip! </p>
 
-<!-- SECTION 8 -->
+<!-- SECTION 1: Solar System -->
     <div class="section-8">
         <table>
             <tr>
@@ -79,11 +79,28 @@
                     <td>Neptune was discovered in 1846!</td>
             </tr>
         </table>
+<!-- SECTION 2: More about Space -->
 
-<!-- SECTION 10 -->
-<h1>Astronomy picture of the day</h1>
+<!-- SECTION 3: Weigh on the planet -->
+<h2>How much would you weigh on the Moon?</h2>
+<input type="text" id="earth-weight" placeholder="Enter your weight (lbs)" />
+<button onclick="calculate()">Calculate</button>
+<p id="moon-result"></p>
+<script>
+    function calculate() {
+        // get what the user typed
+        let weight = document.getElementById("earth-weight").value;
+        // moon gravity is about 16.5% of earth's
+        let moonWeight = (weight * 0.165).toFixed(1);
+        document.getElementById("moon-result").textContent = "You would weigh " + moonWeight + " lbs on the Moon!";
+    }
+</script>
+<!-- SECTION 4: Recipe -->
+ 
+<!-- SECTION 5: Space pic of the day API -->
+<h1>Space pic of the day!</h1>
 <h2 id="apod-title"></h2>
-<img id="apod-image" style="max-width: 100%;"></img>
+<img id="apod-image" style="max-width: 75%;"></img>
 <p id="apod-desc"></p>
 
 <script>
@@ -98,7 +115,7 @@
         .catch(error => console.error("Error:", error));
 </script>
 
-<!-- SECTION 11 -->
+<!-- SECTION 6: Sources -->
         <h1>Sources</h1>
         <p></p>
     </body>
