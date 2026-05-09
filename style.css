@@ -326,6 +326,11 @@ body.soil-page .section-7 { background-color: #142808; border-radius: 12px; padd
 body.soil-page .section-7 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
 body.soil-page .section-7 strong { color: #FFD166; }
 
+.flower-gif {
+  width: 160px;
+  height: 160px;
+}
+
 
 /* space page only colors */
 /* section 8 */
