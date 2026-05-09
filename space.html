@@ -79,5 +79,20 @@
                     <td>Neptune was discovered in 1846!</td>
             </tr>
         </table>
+
+<!-- SECTION 10 -->
+ <h1>Astronomy picture of the day</h1>
+        <script>
+            fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+      // use data.title, data.url, data.explanation, etc.
+    });
+</script>
+
+<!-- SECTION 11 -->
+        <h1>Sources</h1>
+        <p></p>
     </body>
 </html>
