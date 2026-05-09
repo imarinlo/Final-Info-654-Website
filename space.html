@@ -97,7 +97,7 @@
 </script>
 <p>What about these objects?</p>
 <ul>
-  <li>Apple: 0.4 lbs</li>
+  <li>Watermelon: 20 lbs</li>
   <li>Golden Retriever: 65 lbs</li>
   <li>Honda HR-V: 3159 lbs</li>
 </ul>
@@ -117,7 +117,7 @@
             document.getElementById("apod-title").textContent = data.title;
             document.getElementById("apod-image").src = data.url;
             document.getElementById("apod-image").alt = data.title;
-            document.getElementById("apod-description").textContent = data.explanation;
+            document.getElementById("apod-desc").textContent = data.explanation;
         })
         .catch(error => console.error("Error:", error));
 </script>
