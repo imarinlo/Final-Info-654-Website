@@ -130,9 +130,11 @@
 
 <!-- SECTION 5: Space pic of the day API -->
 <h1>Space pic of the day!</h1>
-<h2 id="apod-title"></h2>
-<img id="apod-image" style="max-width: 100%;">
-<p id="apod-desc"></p>
+<div id="apod-container">
+    <h2 id="apod-title"></h2>
+    <img id="apod-image" style="max-width: 100%;">
+    <p id="apod-desc"></p>
+</div>
 
 <script>
     fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
