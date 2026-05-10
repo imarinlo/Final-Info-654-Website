@@ -437,4 +437,21 @@ body.space-page .section-8 h3 { color: #FFA94D; }
 body.space-page .section-8 strong { color: #FFD166; }
 
 
-
+/* underground page only colors */
+body.underground-page { background-color: #2C1A0E; }
+body.underground-page nav { background-color: #6B3A2A; }
+body.underground-page nav a { color: #F5DEB3; }
+body.underground-page nav a:hover { color: #FFD700; }
+body.underground-page hr { border-top: 3px solid #D2691E; }
+body.underground-page h1 { color: #FFD700; }
+body.underground-page h2 { color: #F5DEB3; border-bottom: 3px solid #D2691E; }
+body.underground-page h3 { color: #FFD700; }
+body.underground-page strong { color: #FFD700; }
+body.underground-page a { color: #DEB887; }
+body.underground-page a:hover { color: #FFD700; }
+body.underground-page th { background-color: #6B3A2A; color: #F5DEB3; }
+body.underground-page td { background-color: #3D2010; border-bottom: 2px solid #6B3A2A; }
+body.underground-page tr:hover td { background-color: #4E2A15; }
+body.underground-page ol li em { color: #DEB887; }
+body.underground-page h2 + ul li, body.underground-page h2 + ul li a { color: #C4A882; }
+body.underground-page h2 + ul li a:hover { color: #FFD700; }
