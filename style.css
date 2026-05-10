@@ -15,7 +15,7 @@ body {
 
 /* nav */
 nav {
-  background-color: #3700B3;
+  background-color: #376C63;
   padding: 14px 20px;
   border-radius: 12px;
   text-align: center;
@@ -233,6 +233,10 @@ tr:hover td {
   object-position: center;
 }
 
+.eventimages {
+Width: 100%;
+} 
+
 /* artemis image */
 .artemis-image {
   width: 100%;
@@ -284,6 +288,79 @@ h2 + ul li a {
 /* sources hover */
 h2 + ul li a:hover {
   color: #03DAC6;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #232023;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.vegetables img {
+Width: 100%;
+}
+
+.weather img {
+Width: 100%;
+}
+
+.dino img {
+Width: 100%;
+}
+
+.stars img {
+Width: 100%;
 }
 
 /* soil page only colors */
@@ -358,5 +435,6 @@ body.space-page .section-8 { background-color: #BB86FC; border-radius: 12px; pad
 body.space-page .section-8 h2 { color: #CF6679; border-bottom: 3px solid #FFD166; }
 body.space-page .section-8 h3 { color: #FFA94D; }
 body.space-page .section-8 strong { color: #FFD166; }
+
 
 
