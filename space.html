@@ -84,12 +84,12 @@
 <!-- 2: How much would you weigh -->
 <div class="box">
     <h2>How much would you weigh on the Moon?</h2>
-        <input type="text" id="earth-weight" placeholder="Enter your weight (lbs)" />
+        <input type="text" id="weight" placeholder="Enter your weight (lbs)" />
         <button onclick="calculate()">Calculate</button>
         <p id="moon-result"></p>
         <script>
             function calculate() {
-                let weight = document.getElementById("earth-weight").value;
+                let weight = document.getElementById("weight").value;
                 let moonWeight = (weight * 0.165).toFixed(1);
                 document.getElementById("moon-result").textContent = "You would weigh " + moonWeight + " lbs on the Moon!";
             }
