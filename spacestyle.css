@@ -145,3 +145,8 @@ input {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 1em;
 }
+
+.box {
+    border: 2px dashed #55FF55;
+    border-radius: 10px;
+}
