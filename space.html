@@ -82,15 +82,6 @@
                     </tr>
                 </table>
             </div>
-
-            <!-- SECTION 5: Space pic of the day API -->
-            <div id="apod-container">
-                <h1>Space pic of the day!</h1>
-                <h2 id="apod-title"></h2>
-                <img id="apod-image" style="max-width: 100%;">
-                <p id="apod-desc"></p>
-            </div>
-
         </div>
 
         <!-- SECTION 2: More about Space -->
@@ -145,6 +136,7 @@
 
         <!-- API Script -->
         <script>
+        <dev id="apod-container">
             fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
                 .then(res => res.json())
                 .then(data => {
@@ -154,7 +146,7 @@
                     document.getElementById("apod-desc").textContent = data.explanation;
                 })
                 .catch(error => console.error("Error:", error));
-        </script>
+        </div></script>
 
     </body>
 </html>
