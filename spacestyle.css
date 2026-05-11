@@ -121,7 +121,7 @@ tr:hover td {
 }
 
 button {
-    background-color: #3700B3;
+    background-color: #03DAC6;
     color: #FFFFFF;
     border: none;
     border-radius: 10px;
@@ -129,11 +129,13 @@ button {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 1em;
     cursor: pointer;
+    text-align: center;
 }
 
 button:hover {
-    background-color: #BB86FC;
+    background-color: #a0fef4;
     color: #121212;
+    text-align: center;
 }
 
 input {
@@ -144,6 +146,7 @@ input {
     padding: 10px 14px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 1em;
+    text-align: center;
 }
 
 .box {
