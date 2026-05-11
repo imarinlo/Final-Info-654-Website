@@ -127,4 +127,7 @@ tr:hover td {
     right: 20px;
     top: 100px;
     width: 250px;
+    background-color: #121212;
+    border: 2px dotted #ffef00;
+    border-radius: 10px;
 }
