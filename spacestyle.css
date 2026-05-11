@@ -152,4 +152,6 @@ input {
 .box {
     border: 2px dashed #55FF55;
     border-radius: 10px;
+    width: 250px;
+    background-color: #121212;
 }
