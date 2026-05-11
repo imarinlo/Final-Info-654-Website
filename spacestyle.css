@@ -122,16 +122,9 @@ tr:hover td {
   margin-right: 10px;
 }
 
-#main-flex {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-#table-side {
-    width: 65%;
-}
-
 #apod-container {
-    width: 35%;
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 250px;
 }
