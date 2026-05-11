@@ -36,11 +36,6 @@ hr {
   margin: 60px 0;
 }
 
-.space {
-    height: 60px;
-    border: none;
-}
-
 h1 {
   color: #03DAC6;
   font-size: 2.4em;
@@ -123,4 +118,30 @@ tr:hover td {
     background-color: #121212;
     border: 2px dotted #ffef00;
     border-radius: 10px;
+}
+
+button {
+    background-color: #3700B3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+input {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: 2px solid #BB86FC;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 1em;
 }
