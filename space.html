@@ -134,19 +134,24 @@
         <h1>Sources</h1>
         <p></p>
 
-        <!-- API Script -->
-        <script>
-        <dev id="apod-container">
-            fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById("apod-title").textContent = data.title;
-                    document.getElementById("apod-image").src = data.url;
-                    document.getElementById("apod-image").alt = data.title;
-                    document.getElementById("apod-desc").textContent = data.explanation;
-                })
-                .catch(error => console.error("Error:", error));
-        </div></script>
+<!-- SECTION 5: Space pic of the day -->
+<h1>Space pic of the day!</h1>
+<div id="apod-container">
+    <h2 id="apod-title"></h2>
+    <img id="apod-image" style="max-width: 100%;">
+    <p id="apod-desc"></p>
 
+    <script>
+        fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("apod-title").textContent = data.title;
+                document.getElementById("apod-image").src = data.url;
+                document.getElementById("apod-image").alt = data.title;
+                document.getElementById("apod-desc").textContent = data.explanation;
+            })
+            .catch(error => console.error("Error:", error));
+    </script>
+</div>
     </body>
 </html>
