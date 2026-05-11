@@ -130,13 +130,9 @@
             <li>pastel confetti sprinkles (or yellow sprinkles) :)</li>
         </ul>
 
-        <!-- SECTION 6: Sources -->
-        <h1>Sources</h1>
-        <p></p>
-
 <!-- SECTION 5: Space pic of the day -->
-<h1>Space pic of the day!</h1>
 <div id="apod-container">
+    <h1>Space pic of the day!</h1>
     <h2 id="apod-title"></h2>
     <img id="apod-image" style="max-width: 100%;">
     <p id="apod-desc"></p>
@@ -151,7 +147,10 @@
                 document.getElementById("apod-desc").textContent = data.explanation;
             })
             .catch(error => console.error("Error:", error));
-    </script>
-</div>
+    </script></div>
+<!-- SECTION 6: Sources -->
+<h1>Sources</h1>
+    <p>National Aeronautics and Space Administration. NASA. NASA, <a>www.nasa.gov</a>. Accessed 21 Apr. 2026.</p>
+    <p>SpacePlace. NASA. NASA, <a>https://spaceplace.nasa.gov/</a>. Accessed 21 Apr. 2026.</p>
     </body>
 </html>
