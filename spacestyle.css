@@ -119,8 +119,8 @@ tr:hover td {
     background-color: #121212;
     border: 2px dotted #ffef00;
     border-radius: 10px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 #apod-image {
