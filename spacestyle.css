@@ -115,14 +115,13 @@ tr:hover td {
     position: fixed;
     right: 20px;
     top: 100px;
-    width: 250px;
     background-color: #121212;
     border: 2px dotted #ffef00;
     border-radius: 10px;
 }
 
 #apod-image {
-    width: 100%;
+    max-width: 100%;
 }
 
 button {
@@ -162,5 +161,6 @@ input {
 }
 
 #hubble {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
