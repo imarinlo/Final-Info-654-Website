@@ -363,7 +363,7 @@ Width: 100%;
 Width: 100%;
 }
 
-/* soil page only colors */
+
 body.soil-page { background-color: #84c662; }
 body.soil-page nav { background-color: #7B3F00; }
 body.soil-page nav a { color: #FFFFFF; }
@@ -376,68 +376,149 @@ body.soil-page strong { color: #C8FF57; }
 body.soil-page a { color: #FFD166; }
 body.soil-page a:hover { color: #C8FF57; }
 body.soil-page th { background-color: #7B3F00; color: #FFFFFF; }
-body.soil-page td { background-color: #2A5C10; border-bottom: 2px solid #7B3F00; }
+body.soil-page td {
+  Background-color: #2A5C10;
+  Border-bottom: 2px solid #7B3F00;
+}
 body.soil-page tr:hover td { background-color: #3A7A18; }
-body.soil-page #search-input { background-color: #2A5C10; border: 2px solid #C8FF57; color: #FFFFFF; }
+body.soil-page #search-input {
+  Background-color: #2A5C10;
+  Border: 2px solid #C8FF57;
+  Color: #FFFFFF;
+}
 body.soil-page #search-input::placeholder { color: #A8D88A; }
-body.soil-page #search-btn { background-color: #7B3F00; color: #FFFFFF; }
-body.soil-page #search-btn:hover { background-color: #C8FF57; color: #1A3A0A; }
-body.soil-page #cards { background-color: #2A5C10; border: 2px solid #C8FF57; }
-body.soil-page #cards h2 { color: #C8FF57; border-bottom: 2px solid #7B3F00; }
+body.soil-page #search-btn { 
+  background-color: #7B3F00; 
+  color: #FFFFFF; 
+}
+body.soil-page #search-btn:hover { 
+  background-color: #C8FF57; 
+  color: #1A3A0A; 
+}
+body.soil-page #cards {
+  Background-color: #2A5C10;
+  Border: 2px solid #C8FF57;
+}
+body.soil-page #cards h2 { 
+  color: #C8FF57; 
+  border-bottom: 2px solid #7B3F00; 
+}
 body.soil-page ol li em { color: #FFD166; }
 body.soil-page h2 + ul li, body.soil-page h2 + ul li a { color: #8B5E3C; }
 body.soil-page h2 + ul li a:hover { color: #C8FF57; }
 
-/* section 1 */
-body.soil-page .section-1 { background-color: #3B1F0A; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-1 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
+
+body.soil-page .section-1 {
+  Background-color: #3B1F0A;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-1 h2 { 
+  color: #FFD166; 
+  border-bottom: 3px solid #FFD166; 
+}
 body.soil-page .section-1 h3 { color: #FFA94D; }
 body.soil-page .section-1 strong { color: #FFD166; }
 
-/* section 2 */
-body.soil-page .section-2 { background-color: #0D2E05; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-2 h2 { color: #C8FF57; border-bottom: 3px solid #C8FF57; }
+body.soil-page .section-2 {
+  Background-color: #0D2E05;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-2 h2 {
+   color: #C8FF57; 
+  border-bottom: 3px solid #C8FF57; 
+}
 body.soil-page .section-2 h3 { color: #A8D85A; }
 body.soil-page .section-2 strong { color: #C8FF57; }
 
-/* section 3  */
-body.soil-page .section-3 { background-color: #1A4A08; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-3 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
+/* section 3 */
+body.soil-page .section-3 {
+  Background-color: #1A4A08;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-3 h2 { 
+  color: #FFD166; 
+  border-bottom: 3px solid #FFD166; 
+}
 body.soil-page .section-3 h3 { color: #FFA94D; }
 body.soil-page .section-3 strong { color: #FFD166; }
 
 /* section 4 */
-body.soil-page .section-4 { background-color: #3B2000; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-4 h2 { color: #C8FF57; border-bottom: 3px solid #C8FF57; }
+body.soil-page .section-4 {
+  Background-color: #3B2000;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-4 h2 { 
+  color: #C8FF57; 
+  border-bottom: 3px solid #C8FF57; 
+}
 body.soil-page .section-4 h3 { color: #A8D85A; }
 body.soil-page .section-4 strong { color: #C8FF57; }
 
-/* section 5 */
-body.soil-page .section-5 { background-color: #0A3020; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-5 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
+body.soil-page .section-5 {
+  Background-color: #0A3020;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-5 h2 { 
+  color: #FFD166; 
+  border-bottom: 3px solid #FFD166; 
+}
 body.soil-page .section-5 h3 { color: #FFA94D; }
 body.soil-page .section-5 strong { color: #FFD166; }
 
-/* section 6 */
-body.soil-page .section-6 { background-color: #2E1503; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-6 h2 { color: #C8FF57; border-bottom: 3px solid #C8FF57; }
+body.soil-page .section-6 {
+  Background-color: #2E1503;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-6 h2 { 
+  color: #C8FF57; 
+  border-bottom: 3px solid #C8FF57; 
+}
 body.soil-page .section-6 strong { color: #C8FF57; }
 
-/* section 7*/
-body.soil-page .section-7 { background-color: #142808; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.soil-page .section-7 h2 { color: #FFD166; border-bottom: 3px solid #FFD166; }
+/* section 7 */
+body.soil-page .section-7 {
+  Background-color: #142808;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.soil-page .section-7 h2 { 
+  color: #FFD166; 
+  border-bottom: 3px solid #FFD166; 
+}
 body.soil-page .section-7 strong { color: #FFD166; }
 
 
-/* space page only colors */
-/* section 8 */
-body.space-page .section-8 { background-color: #BB86FC; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.space-page .section-8 h2 { color: #CF6679; border-bottom: 3px solid #FFD166; }
-body.space-page .section-8 h3 { color: #FFA94D; }
+/* space */
+body.space-page .section-8 {
+  Background-color: #BB86FC;
+  Border-radius: 12px;
+  Padding: 20px;
+  Margin-bottom: 16px;
+}
+body.space-page .section-8 h2 { 
+  color: #CF6679; 
+  border-bottom: 3px solid #FFD166; 
+}
+body.space-page .section-8 h3 { 
+  color: #FFA94D; 
+}
 body.space-page .section-8 strong { color: #FFD166; }
 
 
-/* underground page only colors */
+/* underground/dino page */
 body.dino-page { background-color: #2C1A0E; }
 body.dino-page nav { background-color: #6B3A2A; }
 body.dino-page nav a { color: #F5DEB3; }
@@ -450,13 +531,36 @@ body.dino-page strong { color: #FFD700; }
 body.dino-page a { color: #DEB887; }
 body.dino-page a:hover { color: #FFD700; }
 body.dino-page th { background-color: #6B3A2A; color: #F5DEB3; }
-body.dino-page td { background-color: #3D2010; border-bottom: 2px solid #6B3A2A; }
+body.dino-page td {
+  Background-color: #3D2010;
+  Border-bottom: 2px solid #6B3A2A;
+}
 body.dino-page tr:hover td { background-color: #4E2A15; }
 body.dino-page ol li em { color: #DEB887; }
 
-body.dino-page .section-1 { background-color: #3D2010; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.dino-page .section-2 { background-color: #2C1A0E; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.dino-page .section-3 { background-color: #3D2010; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.dino-page .section-4 { background-color: #2C1A0E; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.dino-page .section-5 { background-color: #3D2010; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-body.dino-page .section-6 { background-color: #2C1A0E; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+body.dino-page .section-1 { Background-color: #3D2010; Border-radius: 12px; Padding: 20px; Margin-bottom: 16px; }
+body.dino-page .section-2 { Background-color: #2C1A0E; Border-radius: 12px; Padding: 20px; Margin-bottom: 16px; }
+body.dino-page .section-3 { Background-color: #3D2010; Border-radius: 12px; Padding: 20px; Margin-bottom: 16px; }
+body.dino-page .section-4 { Background-color: #2C1A0E; Border-radius: 12px; Padding: 20px; Margin-bottom: 16px; }
+body.dino-page .section-5 { Background-color: #3D2010; Border-radius: 12px; Padding: 20px; Margin-bottom: 16px; }
+body.dino-page .section-6 { Background-color: #2C1A0E; Border-radius: 12px; Padding: 20px; Margin-bottom: 16px; }
+
+.quiz {
+Text-align:center;
+Background-color:#3D2010;
+Border: 2px solid #D2691E;
+Border-radius: 12px;
+Padding: 20px;
+Margin-bottom:16px;
+}
+
+#panel, #paneltwo, #panelthree, #panelfour, #panelfive, .flip {
+  Padding: 10px;
+  Font-size: 120%;
+  Text-align: center;
+  Background-color: #6B3A2A;
+  Color: #FFD700;
+  Border: solid 1px #D2691E;
+  Margin: auto;
+  Cursor: pointer;
+}

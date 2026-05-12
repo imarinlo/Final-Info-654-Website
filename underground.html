@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Underground: Dinosaurs!</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="dino-page">
 
@@ -17,7 +16,7 @@
   <a href="about.html">About</a>
 </nav>
 
-<hr />
+<hr>
 
 <h1>Dinosaurs: Giants of the Ancient World</h1>
 <p>Have you ever looked down at the ground and wondered what's hiding underneath? You see lots of dirt, 
@@ -26,7 +25,7 @@ roamed the Earth millions of years ago! Everything we know about Dinosaurs actua
 buried under our feet.</p>
 
 
-<hr />
+<hr>
 
 <!-- SECTION 1: What IS a Dinosaur? -->
 <div class="section-1">
@@ -60,7 +59,7 @@ buried under our feet.</p>
   </ul>
 </div>
 
-<hr />
+<hr>
 
 <!-- SECTION 2: Types of Dinosaurs -->
 <div class="section-2">
@@ -112,13 +111,13 @@ buried under our feet.</p>
 
 </div>
 
-<hr />
+<hr>
 
 <!-- SECTION 3: Fossils -->
 <div class="section-3">
   <h2>How Do We Know About Dinosaurs? Fossils!</h2>
 
-  <img src="fossils.jpg" alt="Dinosaur fossils and bones in rock" style="max-width:400px; display:block; margin: 1em 0;" />
+  <img src="fossils.jpg" alt="Dinosaur fossils and bones in rock" style="max-width:400px; display:block; margin: 1em 0;">
 
   <p>No human has ever seen a real live dinosaur -- so how do scientists know so much about them? The answer is <strong>fossils</strong>! A fossil forms when an animal dies and gets buried under layers of mud or sand. Over millions of years, the bones slowly turn to rock. Eventually, they make their way back to the surface where a lucky scientist might spot them!</p>
 
@@ -136,7 +135,7 @@ buried under our feet.</p>
 
 </div>
 
-<hr />
+<hr>
 
 <!-- SECTION 4: Dinosaurs and Birds -->
 <div class="section-4">
@@ -162,42 +161,71 @@ buried under our feet.</p>
 
 </div>
 
-<hr />
+<hr>
 
 <!-- SECTION 5: Quiz -->
-<div class="section-5">
-  <h2>Dino Quiz: Test What You Know!</h2>
-
-  <p>See if you can answer these questions! Check your answers below when you're ready.</p>
-
-  <ol>
-    <li>What makes a dinosaur different from other reptiles? <em>(Answer: Their legs are positioned directly under their bodies, not out to the side. )</em></li>
-    <li>What do we call scientists who study fossils and ancient life? <em>(Answer: Paleontologists)</em></li>
-    <li>True or false: Velociraptors were as big as a car. <em>(Answer: False! They actually were the same size as a turkey!)</em></li>
-    <li>What are the preserved remains or traces of ancient animals called? <em>(Answer: Fossils!)</em></li>
-    <li>What living animal is actually a direct descendant of dinosaurs? <em>(Answer: Birds!)</em></li>
-  </ol>
+<div class="quiz">
+  <p>What makes a dinosaur different from other reptiles?</p>
 </div>
-
-<hr />
-
-<!-- SECTION 6: Current Events -->
-<div class="section-6">
-  <h2>Dinosaur News!</h2>
-
-  <img src="dinosaur.png" alt="cartoon dinosaur" />
-
-  <h3>Underground</h3>
-  <ul>
-    <li>
-      <strong>New Dinosaur Alert:</strong> South Korea has just discovered a new dinosaur species...and its name is Dooly!
-      <a href="https://www.nhm.ac.uk/discover/news/2026/march/new-species-of-south-korea-dinosaur-named-after-famous-south-korean-cartoon.html" target="_blank">Click here to meet the Doolysaurus!</a>
-      <img class="dino-image" src="dino.jpeg" alt="picture of animated character Dooly" />
-    </li>
-  </ul>
+<p class="flip"
+onclick="myFunction('panel')">Answer</p>
+<div id="panel" style="display:none">
+  <p>Their legs are positioned directly under their bodies, not out to the side.</p>
 </div>
+<br>
 
-<hr />
+<div class="quiz">
+  <p>What do we call scientists who study fossils and ancient life?</p>
+</div>
+<p class="flip"
+onclick="myFunction('paneltwo')">Answer</p>
+<div id="paneltwo" style="display:none">
+  <p>Paleontologists!</p>
+</div>
+<br>
+
+<div class="quiz">
+  <p>True or false: Velociraptors were as big as a car.</p>
+</div>
+<p class="flip"
+onclick="myFunction('panelthree')">Answer</p>
+<div id="panelthree" style="display:none">
+  <p>False! They were actually the same size as a turkey!</p>
+</div>
+<br>
+
+<div class="quiz">
+  <p>What are the preserved remains or traces of ancient animals called?</p>
+</div>
+<p class="flip"
+onclick="myFunction('panelfour')">Answer</p>
+<div id="panelfour" style="display:none">
+  <p>Fossils!</p>
+</div>
+<br>
+
+<div class="quiz">
+  <p>What living animal is actually a direct descendant of dinosaurs?</p>
+</div>
+<p class="flip"
+onclick="myFunction('panelfive')">Answer</p>
+<div id="panelfive" style="display:none">
+  <p>Birds!</p>
+</div>
+<br>
+
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<hr>
 
 <h2>For Parents and Teachers</h2>
 
@@ -211,7 +239,7 @@ buried under our feet.</p>
   <li><a href="https://www.nhm.ac.uk/discover/dinosaurs.html" target="_blank">Natural History Museum (London)</a> -- scientifically accurate dinosaur articles and news</li>
 </ul>
 
-<hr />
+<hr>
 
 <p>
   <a href="index.html">Home</a> |
