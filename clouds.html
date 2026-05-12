@@ -117,8 +117,7 @@
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
-<div style="text-align:center">
-</div>
+   
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -134,18 +133,15 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  
+slides[slideIndex-1].style.display = "block";  
 }
+   
 </script>
 <p>Take a look at these awesome clouds that were found in real life!</p>
 <div class="polaroid">
@@ -197,7 +193,7 @@ function showSlides(n) {
 </div>
 <p class="flip"
 onclick="myFunction('panel')">Answer</p>
-<div id="panel" style="display:none">
+<div id="panel">
 <p>Latin</p>
 </div>
 <br>
@@ -206,7 +202,7 @@ onclick="myFunction('panel')">Answer</p>
 </div>
 <p class="flip"
 onclick="myFunction('paneltwo')">Answer</p>
-<div id="paneltwo" style="display:none">
+<div id="paneltwo">
 <p>Cirrus Clouds</p>
 </div>
 <br>
@@ -215,7 +211,7 @@ onclick="myFunction('paneltwo')">Answer</p>
 </div>
 <p class="flip"
 onclick="myFunction('panelthree')">Answer</p>
-<div id="panelthree" style="display:none">
+<div id="panelthree">
 <p>Alto Clouds</p>
 </div>
 <br>
@@ -224,7 +220,7 @@ onclick="myFunction('panelthree')">Answer</p>
 </div>
 <p class="flip"
 onclick="myFunction('panelfour')">Answer</p>
-<div id="panelfour" style="display:none">
+<div id="panelfour">
 <p>Stratus Clouds</p>
 </div>
 <br>
@@ -233,7 +229,7 @@ onclick="myFunction('panelfour')">Answer</p>
 </div>
 <p class="flip"
 onclick="myFunction('panelfive')">Answer</p>
-<div id="panelfive" style="display:none">
+<div id="panelfive">
 <p>Thunderheads</p>
 </div>
 <br>

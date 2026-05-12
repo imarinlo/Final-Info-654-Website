@@ -84,7 +84,7 @@
 <!-- 2: How much would you weigh -->
 <div class="box">
     <h2>How much would you weigh on the Moon?</h2>
-        <input type="text" id="weight" placeholder="Enter your weight (lbs)" />
+        <input type="text" id="weight" placeholder="Enter your weight (lbs)">
         <button onclick="calculate()">Calculate</button>
         <p id="moon-result"></p>
         <script>
@@ -151,8 +151,11 @@
 <!-- 6: Side APoD -->
 <div id="apod-container">
         <h2>Space pic of the day!</h2>
-        <h3 id="apod-title"></h3>
-        <img id="apod-image" style="max-width: 100%;">
+        <h3 id="apod-title">Loading...</h3>
+        <img id="apod-image" 
+            alt="A NASA selected astronomy image of the day"
+            style="max-width: 100%;"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
         <p id="apod-desc"></p>
             <script>
                 fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
