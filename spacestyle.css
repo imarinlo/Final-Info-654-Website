@@ -121,11 +121,11 @@ tr:hover td {
     border-radius: 10px;
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
 }
 
 #apod-image {
     max-width: 100%;
+    height: auto;
 }
 
 button {
