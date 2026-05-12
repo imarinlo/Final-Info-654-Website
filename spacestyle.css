@@ -164,7 +164,9 @@ input {
     padding: 24px;
 }
 
-#hubble {
-    max-width: 100%;
+#hubble img {
+    max-width: 70%;
     height: auto;
+    display: block;
+    margin: 20px;
 }
