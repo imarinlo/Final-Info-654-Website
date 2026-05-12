@@ -121,6 +121,10 @@ tr:hover td {
     border-radius: 10px;
 }
 
+#apod-image {
+    width: 100%;
+}
+
 button {
     background-color: #03DAC6;
     color: #FFFFFF;
@@ -156,4 +160,8 @@ input {
     width: 250px;
     background-color: #606060;
     padding: 24px;
+}
+
+#hubble {
+    width: 100%;
 }
