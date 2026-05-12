@@ -113,6 +113,25 @@ div.container {
 Div.polaroid img {
 Width: 100%;
 }
+#panel {
+Display:none
+}
+
+#paneltwo {
+Display:none
+}
+
+#panelthree {
+Display:none
+}
+
+#panelfour {
+Display:none
+}
+
+#panelfive {
+Display:none
+}
 #panel, .flip {
   padding: 10px;
 Font-size: 120%;
